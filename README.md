@@ -1,6 +1,6 @@
 # Домашнее задание к занятию 1 «Disaster recovery и Keepalived»
 
-[Подробное описание решения домашнего задания в GoogleDocs](ссылка)
+[Подробное описание решения домашнего задания в GoogleDocs](https://docs.google.com/document/d/10ShN26LDhu1ShkUM5ocGalIIdsPgonm5HRoAerx0Gg4/edit?usp=drive_link)
 
 ### Задание 1
 
@@ -14,7 +14,7 @@
 
 Дана следующая схема:
 
-![](ссылка на картинку PIC001)
+![](pic/PIC001.PNG)
 
 Настройки **Router1**
 
