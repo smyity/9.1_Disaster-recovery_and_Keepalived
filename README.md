@@ -216,6 +216,8 @@ GigabitEthernet0/1 - Group 1 (version 2)
 
 ![](pic/PIC007.PNG)
 
+[Моя схема](schemeCPT/hsrp_tracking.pkt)
+
 ------
 
 
@@ -240,7 +242,7 @@ sudo apt install keepalived
 sudo nano /etc/keepalived/keepalived.conf
 ````
 
-[Ссылка на keepalived.conf с отслеживанием скрипта](здесь должна быть ссылка)
+[keepalived.conf с отслеживанием скрипта](config_file/task2/conf_MASTER/keepalived.conf)
 
 ````
 sudo systemctl start keepalived
@@ -254,7 +256,7 @@ sudo systemctl start keepalived
 sudo nano /etc/keepalived/keepalived.conf
 ````
 
-[Ссылка на keepalived.conf BACKUP статус](здесь должна быть ссылка)
+[keepalived.conf BACKUP статус](config_file/task2/conf_BACKUP/keepalived.conf)
 
 ````
 sudo systemctl start keepalived
@@ -266,7 +268,7 @@ sudo systemctl start keepalived
 
 Создан скрипт, который будет проверять доступность порта данного веб-сервера и существование файла index.html в root-директории данного веб-сервера на машине MASTER [192.168.122.121]. Скрипт находится в директории /etc/keepalived
 
-[Ссылка на скрипт check_nginx.sh](здесь должна быть ссылка)
+[скрипт check_nginx.sh](scripts/check_nginx.sh)
 
 ````
 sudo chown root:root check_nginx.sh
@@ -308,9 +310,9 @@ sudo systemctl stop nginx.service
 
 ### Решение 3
 
-Файл конфигурации: [Ссылка на keepalived.conf отслеживающий состояние файла](здесь должна быть ссылка)
+[keepalived.conf отслеживающий состояние файла](config_file/task3/keepalived.conf)
 
-[Ссылка на скрипт check_laodavg.sh](здесь должна быть ссылка)
+[скрипт check_laodavg.sh](scripts/check_laodavg.sh)
 
 ````
 sudo crontab -e
@@ -328,9 +330,9 @@ sudo crontab -e
 
 ![](pic/PIC014.PNG)
 
-Для чтобы плавающий ip адрес всегда был прикреплен к серверу, имеющему наименьшую нагрузку можно использовать % загрузки процессора, преобразуя его в целое число и вычитать из **priority**.
+Для чтобы плавающий ip адрес всегда был прикреплен к серверу, имеющему наименьшую нагрузку можно использовать % загрузки процессора, преобразуя его в целое число и вычитать из **priority**. При этом на каждой машине должен находиться скрипт и конфигурационный файл, настроенный на отслеживание файла.
 
-[Ссылка на скрипт cpu_percent.sh](здесь должна быть ссылка)
+[скрипт cpu_percent.sh](scripts/cpu_percent.sh)
 
 Схема использования:
 
