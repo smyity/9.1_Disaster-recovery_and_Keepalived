@@ -327,7 +327,7 @@ sudo crontab -e
 Запуск на машине стресс-теста
 
 ````
-/etc/keepalived$ stress-ng --cpu 0
+stress-ng --cpu 0
 ````
 
 ![](pic/PIC014.PNG)
